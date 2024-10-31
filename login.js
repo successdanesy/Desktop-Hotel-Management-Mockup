@@ -4,14 +4,12 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     // Get input values
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const switchHotels = document.getElementById('switch-hotels').checked;
 
-    // Validate form inputs (simple validation)
-    if (email && password) {
-        alert(`Logging in with Email: ${email}, Password: ${password}, Switch Hotels: ${switchHotels}`);
-        
-        // Perform the login process (authentication logic here)
+    // Check credentials
+    if (email === "admin@example.com" && password === "admin") {
+        // Redirect to home.html
+        window.location.href = "home.html";
     } else {
-        alert('Please fill in all fields.');
+        alert('Incorrect email or password. Please try again.');
     }
 });
