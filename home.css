@@ -1,125 +1,140 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-  
-  .sidebar {
-    width: 80px;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-  }
-  
-  .sidebar .icon {
-    margin: 20px 0;
-    font-size: 24px;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar {
-    width: 60%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .new-guest {
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .new-guest i {
-    margin-right: 5px;
-  }
-  
-  .welcome {
-    font-size: 16px;
-    color: #333;
-    display: flex;
-    align-items: center;
-  }
-  
-  .welcome i {
-    margin-right: 5px;
-  }
-  
-  .dashboard {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .room-management, .service-requests, .kitchen-order, .bar-order {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    flex: 1 1 300px;
-  }
-  
-  .room-management h2, .service-requests h2, .kitchen-order h2, .bar-order h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .room-status {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .view-tasks, .view-schedule {
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-  
-  .view-tasks i, .view-schedule i {
-    margin-right: 5px;
-  }
-  
-  .service-requests .request-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-  }
-  
-  .kitchen-order table, .bar-order table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .kitchen-order th, .bar-order th, .kitchen-order td, .bar-order td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-  
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.sidebar {
+  width: 80px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar .icon {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sidebar .icon:hover {
+  color: #007bff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.new-guest {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.new-guest i {
+  margin-right: 5px;
+}
+
+.welcome {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.welcome i {
+  margin-right: 5px;
+}
+
+.dashboard {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.room-management, .service-requests, .kitchen-order, .bar-order {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+}
+
+.room-management h2, .service-requests h2, .kitchen-order h2, .bar-order h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.room-status, .request-item, .view-schedule, .view-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view-tasks, .view-schedule {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.view-tasks i, .view-schedule i {
+  margin-right: 5px;
+}
+
+.service-requests .request-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.kitchen-order table, .bar-order table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.kitchen-order th, .bar-order th, .kitchen-order td, .bar-order td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
