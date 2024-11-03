@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antilla Apartments & Suites - Service Requests</title>
+  <link rel="stylesheet" href="service-requests.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="icon"><i class="fas fa-hotel"></i></div>
+    <div class="icon"><i class="fas fa-tasks"></i></div>
+    <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+    <div class="icon"><i class="fas fa-cog"></i></div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <header>
+      <input type="text" placeholder="Search requests..." class="search-bar">
+      <button class="button back-to-dashboard"><i class="fas fa-arrow-left"></i> <a href="home.html">Back to Dashboard</a></button>
+      <div class="welcome"><i class="fas fa-user-circle"></i> Welcome</div>
+    </header>
+
+    <!-- Service Requests Overview -->
+    <div class="service-requests-overview">
+      <h2>Service Requests</h2>
+      <div class="filter-options">
+        <label>
+          <input type="checkbox" id="filter-active" checked>
+          Active Requests
+        </label>
+        <label>
+          <input type="checkbox" id="filter-completed">
+          Completed Requests
+        </label>
+        <select id="filter-type">
+          <option value="all">All Types</option>
+          <option value="bar">Bar</option>
+          <option value="kitchen">Kitchen</option>
+          <option value="housekeeping">Housekeeping</option>
+        </select>
+      </div>
+
+      <!-- Active Requests Section -->
+      <section id="active-requests">
+        <h3>Active Requests</h3>
+        <div class="request-item">
+          <span><i class="fas fa-wine-bottle"></i> Bar Request: Additional wine bottles needed at bar</span>
+          <span>07:30 AM</span>
+          <button class="button mark-completed"><i class="fas fa-check"></i> Mark Completed</button>
+        </div>
+        <div class="request-item">
+          <span><i class="fas fa-exclamation-circle"></i> Kitchen Update: Out of grilled salmon until further notice</span>
+          <span>08:15 AM</span>
+          <button class="button mark-completed"><i class="fas fa-check"></i> Mark Completed</button>
+        </div>
+        <div class="request-item">
+          <span><i class="fas fa-broom"></i> Housekeeping Request: Deep clean required for Room 205</span>
+          <span>09:45 AM</span>
+          <button class="button mark-completed"><i class="fas fa-check"></i> Mark Completed</button>
+        </div>
+      </section>
+
+      <!-- Completed Requests Section -->
+      <section id="completed-requests">
+        <h3>Completed Requests</h3>
+        <div class="request-item">
+          <span><i class="fas fa-concierge-bell"></i> Front Desk: Late checkout approved for Room 312</span>
+          <span>Yesterday</span>
+          <button class="button remove-request"><i class="fas fa-trash"></i> Remove</button>
+        </div>
+        <!-- Add more completed requests as needed -->
+      </section>
+    </div>
+  </div>
+
+  <script src="service-requests.js"></script>
+</body>
+</html>
