@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antilla Apartments & Suites - Kitchen Order</title>
+  <link rel="stylesheet" href="kitchen.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="icon"><i class="fas fa-hotel"></i></div>
+    <div class="icon"><i class="fas fa-tasks"></i></div>
+    <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+    <div class="icon"><i class="fas fa-cog"></i></div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <header>
+      <h2>Kitchen Order Management</h2>
+      <p>Send orders directly from the front desk to the kitchen.</p>
+    </header>
+
+    <!-- Order Input Section -->
+    <section class="order-form">
+      <h3>New Order</h3>
+      <form id="orderForm">
+        <div>
+          <label for="roomNumber">Room Number:</label>
+          <input type="text" id="roomNumber" name="roomNumber" placeholder="e.g., 101" required>
+        </div>
+        <div>
+          <label for="dishName">Select Dish:</label>
+          <select id="dishSelector" required>
+            <option value="" disabled selected>Select a dish</option>
+            <option value="Chicken & Chips" data-price="15" data-img="images/chicken_chips.jpg">Chicken & Chips - $15</option>
+            <option value="Grilled Fish" data-price="20" data-img="images/grilled_fish.jpg">Grilled Fish - $20</option>
+            <option value="Spaghetti Carbonara" data-price="12" data-img="images/carbonara.jpg">Spaghetti Carbonara - $12</option>
+            <option value="Vegetable Salad" data-price="10" data-img="images/salad.jpg">Vegetable Salad - $10</option>
+
+          </select>
+          <div id="selectedDish">
+            <img id="dishImg" src="" alt="Dish Image" class="dish-img">
+            <p id="dishDetails"></p>
+          </div>
+        </div>
+        <div>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 2" required>
+        </div>
+        <div>
+          <label for="specialInstructions">Special Instructions:</label>
+          <textarea id="specialInstructions" name="specialInstructions" placeholder="e.g., Extra spicy"></textarea>
+        </div>
+        <button type="submit" class="submit-order"><i class="fas fa-paper-plane"></i> Submit Order</button>
+      </form>
+    </section>
+
+    <!-- Current Orders Section -->
+    <section class="current-orders">
+      <h3>Current Orders</h3>
+      <div id="orderList">
+        <p>No orders yet.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="kitchen.js"></script>
+</body>
+</html>
