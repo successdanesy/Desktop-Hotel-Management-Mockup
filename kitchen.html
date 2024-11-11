@@ -3,71 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antilla Apartments & Suites - Kitchen Order</title>
+  <title>Kitchen Order - Antilla Apartments & Suites</title>
   <link rel="stylesheet" href="kitchen.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div class="icon"><i class="fas fa-hotel"></i></div>
-    <div class="icon"><i class="fas fa-tasks"></i></div>
-    <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-    <div class="icon"><i class="fas fa-cog"></i></div>
-  </aside>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <!-- Header -->
-    <header>
-      <h2>Kitchen Order Management</h2>
-      <p>Send orders directly from the front desk to the kitchen.</p>
-    </header>
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="icon"><i class="fas fa-hotel"></i></div>
+  <div class="icon"><i class="fas fa-tasks"></i></div>
+  <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+  <div class="icon"><i class="fas fa-cog"></i></div>
+</aside>
 
-    <!-- Order Input Section -->
-    <section class="order-form">
-      <h3>New Order</h3>
-      <form id="orderForm">
-        <div>
-          <label for="roomNumber">Room Number:</label>
-          <input type="text" id="roomNumber" name="roomNumber" placeholder="e.g., 101" required>
-        </div>
-        <div>
-          <label for="dishName">Select Dish:</label>
-          <select id="dishSelector" required>
-            <option value="" disabled selected>Select a dish</option>
-            <option value="Chicken & Chips" data-price="15" data-img="images/chicken_chips.jpg">Chicken & Chips - $15</option>
-            <option value="Grilled Fish" data-price="20" data-img="images/grilled_fish.jpg">Grilled Fish - $20</option>
-            <option value="Spaghetti Carbonara" data-price="12" data-img="images/carbonara.jpg">Spaghetti Carbonara - $12</option>
-            <option value="Vegetable Salad" data-price="10" data-img="images/salad.jpg">Vegetable Salad - $10</option>
+<!-- Main Content -->
+<div class="main-content">
+  <!-- Header -->
+  <header>
+    <input type="text" placeholder="Search dishes..." class="search-bar">
+    <div class="welcome"><i class="fas fa-user-circle"></i> Welcome</div>
+  </header>
 
-          </select>
-          <div id="selectedDish">
-            <img id="dishImg" src="" alt="Dish Image" class="dish-img">
-            <p id="dishDetails"></p>
-          </div>
-        </div>
-        <div>
-          <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g., 2" required>
-        </div>
-        <div>
-          <label for="specialInstructions">Special Instructions:</label>
-          <textarea id="specialInstructions" name="specialInstructions" placeholder="e.g., Extra spicy"></textarea>
-        </div>
-        <button type="submit" class="submit-order"><i class="fas fa-paper-plane"></i> Submit Order</button>
-      </form>
-    </section>
+  <h2>Kitchen Order - Select and Send Orders to Kitchen</h2>
 
-    <!-- Current Orders Section -->
-    <section class="current-orders">
-      <h3>Current Orders</h3>
-      <div id="orderList">
-        <p>No orders yet.</p>
-      </div>
-    </section>
+  <!-- Filters Section -->
+  <div class="filters">
+    <button onclick="filterCategory('Appetizers')">Appetizers</button>
+    <button onclick="filterCategory('Main Courses')">Main Courses</button>
+    <button onclick="filterCategory('Desserts')">Desserts</button>
   </div>
 
-  <script src="kitchen.js"></script>
+  <div class="order-page">
+    <!-- Dish Selection Section -->
+    <div class="dishes">
+      <div class="dish-card" data-category="Appetizers">
+        <img src="images/salad.jpg" alt="Salad">
+        <div class="dish-info">
+          <h3>Salad</h3>
+          <p>$8.00</p>
+          <button onclick="addToOrder('Salad', 8)">+ Add</button>
+        </div>
+      </div>
+
+      <div class="dish-card" data-category="Appetizers">
+        <img src="images/gizzard-suya.jpg" alt="gizzard-suya">
+        <div class="dish-info">
+          <h3>Gizzard Suya</h3>
+          <p>$8.00</p>
+          <button onclick="addToOrder('Gizzard Suya', 8)">+ Add</button>
+        </div>
+      </div>
+
+      <div class="dish-card" data-category="Appetizers">
+        <img src="images/abacha.jpg" alt="abacha">
+        <div class="dish-info">
+          <h3>Abacha</h3>
+          <p>$8.00</p>
+          <button onclick="addToOrder('Abacha', 8)">+ Add</button>
+        </div>
+      </div>
+      <!-- Main courwses -->
+      <div class="dish-card" data-category="Main Courses">
+        <img src="images/italian-pasta.jpg" alt="Pasta">
+        <div class="dish-info">
+          <h3>Italian Pasta</h3>
+          <p>$12.00</p>
+          <button onclick="addToOrder('Italian Pasta', 12)">+ Add</button>
+        </div>
+      </div>
+
+      <div class="dish-card" data-category="Main Courses">
+        <img src="images/Jollof-Rice.jpg" alt="jollof-rice">
+        <div class="dish-info">
+          <h3>Jollof Rice</h3>
+          <p>$12.00</p>
+          <button onclick="addToOrder('Jollof-Rice', 12)">+ Add</button>
+        </div>
+      </div>
+
+      <div class="dish-card" data-category="Main Courses">
+        <img src="images/Fried-Rice.jpg" alt="fried-rice">
+        <div class="dish-info">
+          <h3>Fried Rice</h3>
+          <p>$12.00</p>
+          <button onclick="addToOrder('Fried Rice', 12)">+ Add</button>
+        </div>
+      </div>
+
+      <!-- Desserts... -->
+      <div class="dish-card" data-category="Desserts">
+        <img src="images/chin-chin.jpg" alt="chin-chin">
+        <div class="dish-info">
+          <h3>Chin Chin</h3>
+          <p>$5.00</p>
+          <button onclick="addToOrder('chin-chin', 5)">+ Add</button>
+        </div>
+      </div>
+
+      <div class="dish-card" data-category="Desserts">
+        <img src="images/puff-puff.jpg" alt="puff-puff">
+        <div class="dish-info">
+          <h3>Puff Puff</h3>
+          <p>$5.00</p>
+          <button onclick="addToOrder('puff-puff', 5)">+ Add</button>
+        </div>
+      </div>
+
+      <div class="dish-card" data-category="Desserts">
+        <img src="images/Moi-Moi.jpg" alt="moi-moi">
+        <div class="dish-info">
+          <h3>Moi Moi</h3>
+          <p>$5.00</p>
+          <button onclick="addToOrder('moi-moi', 5)">+ Add</button>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <!-- Order Summary Sidebar -->
+    <aside class="order-summary">
+      <h3>Order Summary</h3>
+      <ul id="orderList"></ul>
+      <p>Total: $<span id="totalAmount">0.00</span></p>
+      <label for="specialInstructions">Special Instructions:</label>
+      <textarea id="specialInstructions" placeholder="Add any specific instructions..."></textarea>
+      <button class="send-to-kitchen" onclick="confirmOrder()">Send to Kitchen</button>
+    </aside>
+  </div>
+</div>
+
+<!-- Order Confirmation Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3>Order Confirmation</h3>
+    <p>Review your order before sending:</p>
+    <ul id="modalOrderList"></ul>
+    <p>Total: $<span id="modalTotalAmount">0.00</span></p>
+    <button onclick="sendToKitchen()">Confirm & Send</button>
+  </div>
+</div>
+
+<script src="kitchen.js"></script>
 </body>
 </html>

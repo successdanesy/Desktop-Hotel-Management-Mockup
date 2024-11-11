@@ -2,13 +2,13 @@ let order = [];
 let totalAmount = 0;
 
 function filterCategory(category) {
-  document.querySelectorAll('.dish-card').forEach(card => {
+  document.querySelectorAll('.drinks-card').forEach(card => {
     card.style.display = card.getAttribute('data-category') === category ? 'block' : 'none';
   });
 }
 
-function addToOrder(dishName, price) {
-  const item = { name: dishName, price: price };
+function addToOrder(drinksName, price) {
+  const item = { name: drinksName, price: price };
   order.push(item);
   updateOrderSummary();
 }
@@ -37,7 +37,7 @@ function closeModal() {
   document.getElementById('orderModal').style.display = 'none';
 }
 
-function sendToKitchen() {
-  alert("Order sent to the kitchen!");
+function sendToBar() {
+  alert("Order sent to the bar!");
   closeModal();
 }
