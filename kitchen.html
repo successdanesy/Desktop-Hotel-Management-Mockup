@@ -41,8 +41,8 @@
         <img src="images/salad.jpg" alt="Salad">
         <div class="dish-info">
           <h3>Salad</h3>
-          <p>$8.00</p>
-          <button onclick="addToOrder('Salad', 8)">+ Add</button>
+          <p>₦1,500</p>
+          <button onclick="addToOrder('Salad', 1500)">+ Add</button>
         </div>
       </div>
 
@@ -50,8 +50,8 @@
         <img src="images/gizzard-suya.jpg" alt="gizzard-suya">
         <div class="dish-info">
           <h3>Gizzard Suya</h3>
-          <p>$8.00</p>
-          <button onclick="addToOrder('Gizzard Suya', 8)">+ Add</button>
+          <p>₦4,000</p>
+          <button onclick="addToOrder('Gizzard Suya', 4000)">+ Add</button>
         </div>
       </div>
 
@@ -59,8 +59,8 @@
         <img src="images/abacha.jpg" alt="abacha">
         <div class="dish-info">
           <h3>Abacha</h3>
-          <p>$8.00</p>
-          <button onclick="addToOrder('Abacha', 8)">+ Add</button>
+          <p>₦6,000</p>
+          <button onclick="addToOrder('Abacha', 6000)">+ Add</button>
         </div>
       </div>
       <!-- Main courwses -->
@@ -68,8 +68,8 @@
         <img src="images/italian-pasta.jpg" alt="Pasta">
         <div class="dish-info">
           <h3>Italian Pasta</h3>
-          <p>$12.00</p>
-          <button onclick="addToOrder('Italian Pasta', 12)">+ Add</button>
+          <p>₦8,000</p>
+          <button onclick="addToOrder('Italian Pasta', 8000)">+ Add</button>
         </div>
       </div>
 
@@ -77,8 +77,8 @@
         <img src="images/Jollof-Rice.jpg" alt="jollof-rice">
         <div class="dish-info">
           <h3>Jollof Rice</h3>
-          <p>$12.00</p>
-          <button onclick="addToOrder('Jollof-Rice', 12)">+ Add</button>
+          <p>₦6,000</p>
+          <button onclick="addToOrder('Jollof-Rice', 6000)">+ Add</button>
         </div>
       </div>
 
@@ -86,8 +86,8 @@
         <img src="images/Fried-Rice.jpg" alt="fried-rice">
         <div class="dish-info">
           <h3>Fried Rice</h3>
-          <p>$12.00</p>
-          <button onclick="addToOrder('Fried Rice', 12)">+ Add</button>
+          <p>₦6,000</p>
+          <button onclick="addToOrder('Fried Rice', 6000)">+ Add</button>
         </div>
       </div>
 
@@ -96,8 +96,8 @@
         <img src="images/chin-chin.jpg" alt="chin-chin">
         <div class="dish-info">
           <h3>Chin Chin</h3>
-          <p>$5.00</p>
-          <button onclick="addToOrder('chin-chin', 5)">+ Add</button>
+          <p>₦3,000</p>
+          <button onclick="addToOrder('chin-chin', 3000)">+ Add</button>
         </div>
       </div>
 
@@ -105,8 +105,8 @@
         <img src="images/puff-puff.jpg" alt="puff-puff">
         <div class="dish-info">
           <h3>Puff Puff</h3>
-          <p>$5.00</p>
-          <button onclick="addToOrder('puff-puff', 5)">+ Add</button>
+          <p>₦3,500</p>
+          <button onclick="addToOrder('puff-puff', 3500)">+ Add</button>
         </div>
       </div>
 
@@ -114,8 +114,8 @@
         <img src="images/Moi-Moi.jpg" alt="moi-moi">
         <div class="dish-info">
           <h3>Moi Moi</h3>
-          <p>$5.00</p>
-          <button onclick="addToOrder('moi-moi', 5)">+ Add</button>
+          <p>₦3,000</p>
+          <button onclick="addToOrder('moi-moi', 3000)">+ Add</button>
         </div>
       </div>
 
@@ -126,7 +126,7 @@
     <aside class="order-summary">
       <h3>Order Summary</h3>
       <ul id="orderList"></ul>
-      <p>Total: $<span id="totalAmount">0.00</span></p>
+      <p>Total: ₦<span id="totalAmount">0.00</span></p>
       <label for="specialInstructions">Special Instructions:</label>
       <textarea id="specialInstructions" placeholder="Add any specific instructions..."></textarea>
       <button class="send-to-kitchen" onclick="confirmOrder()">Send to Kitchen</button>
@@ -141,7 +141,7 @@
     <h3>Order Confirmation</h3>
     <p>Review your order before sending:</p>
     <ul id="modalOrderList"></ul>
-    <p>Total: $<span id="modalTotalAmount">0.00</span></p>
+    <p>Total: ₦<span id="modalTotalAmount">0.00</span></p>
     <button onclick="sendToKitchen()">Confirm & Send</button>
   </div>
 </div>

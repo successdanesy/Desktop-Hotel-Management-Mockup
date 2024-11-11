@@ -20,7 +20,7 @@ function updateOrderSummary() {
 
   order.forEach(item => {
     const li = document.createElement('li');
-    li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    li.textContent = `${item.name} - ₦${item.price.toFixed(2)}`;
     orderList.appendChild(li);
   });
 
@@ -28,7 +28,7 @@ function updateOrderSummary() {
 }
 
 function confirmOrder() {
-  document.getElementById('modalOrderList').innerHTML = order.map(item => `<li>${item.name} - $${item.price.toFixed(2)}</li>`).join('');
+  document.getElementById('modalOrderList').innerHTML = order.map(item => `<li>${item.name} - ₦${item.price.toFixed(2)}</li>`).join('');
   document.getElementById('modalTotalAmount').textContent = totalAmount.toFixed(2);
   document.getElementById('orderModal').style.display = 'flex';
 }

@@ -42,8 +42,8 @@
         <img src="images/vodka-+-Active.jpg" alt="vodka + Active">
         <div class="drinks-info">
           <h3>Vodka + Active</h3>
-          <p>$8.00</p>
-          <button onclick="addToOrder('vodka + Active', 8)">+ Add</button>
+          <p>₦6,000</p>
+          <button onclick="addToOrder('vodka + Active', 6000)">+ Add</button>
         </div>
       </div>
 
@@ -51,8 +51,8 @@
         <img src="images/chapman.jpg" alt="chapman">
         <div class="drinks-info">
           <h3>Chapman</h3>
-          <p>$8.00</p>
-          <button onclick="addToOrder('Chapman', 8)">+ Add</button>
+          <p>₦4,000</p>
+          <button onclick="addToOrder('Chapman', 4000)">+ Add</button>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
     <aside class="order-summary">
       <h3>Order Summary</h3>
       <ul id="orderList"></ul>
-      <p>Total: $<span id="totalAmount">0.00</span></p>
+      <p>Total: ₦<span id="totalAmount">0.00</span></p>
       <label for="specialInstructions">Special Instructions:</label>
       <textarea id="specialInstructions" placeholder="Add any specific instructions..."></textarea>
       <button class="send-to-bar" onclick="confirmOrder()">Send to Bar</button>
@@ -76,7 +76,7 @@
     <h3>Order Confirmation</h3>
     <p>Review your order before sending:</p>
     <ul id="modalOrderList"></ul>
-    <p>Total: $<span id="modalTotalAmount">0.00</span></p>
+    <p>Total: ₦<span id="modalTotalAmount">0.00</span></p>
     <button onclick="sendToBar()">Confirm & Send</button>
   </div>
 </div>
