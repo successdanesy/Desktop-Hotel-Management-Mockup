@@ -1,0 +1,15 @@
+{
+    "redirects": [
+      {
+        "source": "/kitchen-login",
+        "destination": "/kitchen-login.html",
+        "permanent": true
+      },
+      {
+        "source": "/bar-login",
+        "destination": "/bar-login.html",
+        "permanent": true
+      }
+    ]
+  }
+  
