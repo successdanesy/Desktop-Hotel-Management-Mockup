@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Orders & Updates</title>
+    <link rel="stylesheet" href="bar-update.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="icon"><i class="fas fa-cocktail"></i></div>
+        <div class="icon"><i class="fas fa-tasks"></i></div>
+        <div class="icon"><i class="fas fa-cog"></i></div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Bar Orders & Updates</h1>
+        </header>
+
+        <!-- Orders Section -->
+        <section id="order-list">
+            <h2>Incoming Orders</h2>
+            <div id="orders">
+                <!-- Sample order card -->
+                <div class="order-card" id="order1">
+                    <h5>Order #1, Room 204</h5>
+                    <p><strong>Items:</strong> Margarita, Whiskey Sour</p>
+                    <p><strong>Special Instructions:</strong> No ice, extra lime</p>
+                    <button class="btn btn-warning btn-sm" onclick="markInProgress('order1')">Mark as In Progress</button>
+                    <button class="btn btn-success btn-sm" onclick="markCompleted('order1')">Mark as Completed</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Update Section -->
+        <section id="bar-updates">
+            <h2>Bar Updates</h2>
+            <form id="update-form">
+                <input type="text" id="update-input" placeholder="Enter update (e.g., Out of tonic water)">
+                <button type="submit" class="button send-update"><i class="fas fa-share-square"></i> Send Update</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="bar-update.js"></script>
+</body>
+</html>
