@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
 }
@@ -65,6 +66,7 @@ h1 {
   background-color: #fff;
 }
 
+/* Room Management Dashboard Styles */
 .room-dashboard {
   display: flex;
   flex-direction: column;
@@ -116,8 +118,13 @@ h1 {
   font-weight: bold;
 }
 
-.available .status { color: #28a745; }
-.booked .status { color: #dc3545; }
+.available .status {
+  color: #28a745;
+}
+
+.booked .status {
+  color: #dc3545;
+}
 
 .action-button {
   background-color: #007bff;
@@ -129,8 +136,16 @@ h1 {
   font-size: 14px;
   margin-top: 10px;
   width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .action-button:hover {
   background-color: #0056b3;
+}
+
+.action-button a {
+  color: white;
+  text-decoration: none;
 }

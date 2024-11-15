@@ -11,9 +11,9 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         window.location.href = "home.html";
     } else if (email === "kitchen@example.com" && password === "kitchen") {
         // Redirect to kitchen-update.html for kitchen staff
-        window.location.href = "kitchen-update.html";
+        window.location.href = "kitchen.html";
     } else if (email === "bar@example.com" && password === "bar") {
-        window.location.href = "bar-update.html"; // Redirect to bar update page
+        window.location.href = "bar.html"; // Redirect to bar update page
     } else {
         alert('Incorrect email or password. Please try again.');
     }

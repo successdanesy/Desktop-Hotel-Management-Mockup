@@ -118,32 +118,59 @@
           <button onclick="addToOrder('moi-moi', 3000)">+ Add</button>
         </div>
       </div>
-
-      
     </div>
 
-    <!-- Order Summary Sidebar -->
-    <aside class="order-summary">
-      <h3>Order Summary</h3>
-      <ul id="orderList"></ul>
-      <p>Total: ₦<span id="totalAmount">0.00</span></p>
-      <label for="specialInstructions">Special Instructions:</label>
-      <textarea id="specialInstructions" placeholder="Add any specific instructions..."></textarea>
-      <button class="send-to-kitchen" onclick="confirmOrder()">Send to Kitchen</button>
-    </aside>
+
+
+<!-- Order Summary Sidebar -->
+<aside class="order-summary">
+  <h3>Order Summary</h3>
+
+  <!-- Room Number Selection -->
+  <label for="roomNumber">Select Room Number:</label>
+  <select id="roomNumber">
+    <option value="101">101</option>
+    <option value="102">102</option>
+    <option value="103">103</option>
+    <!-- Add more rooms as needed -->
+  </select>
+
+  <ul id="orderList"></ul>
+  <p>Total: ₦<span id="totalAmount">0.00</span></p>
+  
+  <!-- Special Instructions -->
+  <label for="specialInstructions">Special Instructions:</label>
+  <textarea id="specialInstructions" placeholder="Add any specific instructions..."></textarea>
+  
+  <!-- Clear All Orders Button -->
+  <button id="clearAllOrdersButton">Clear All Orders</button>
+  
+  <!-- Button to Send to Front Desk -->
+  <button class="send-to-frontdesk" onclick="confirmOrder()">Send to Front Desk</button>
+
+</aside>
   </div>
+  
+  <!-- Temporary Order Summary -->
+<div id="orderSummaryPopup" style="display:none;">
+  <h2>Order Summary</h2>
+  <ul id="orderSummaryList"></ul>
+  <p>Total Amount: ₦<span id="orderSummaryTotal">0.00</span></p>
+  <p>Room Number: <span id="orderSummaryRoomNumber"></span></p>
+  <button onclick="sendToKitchen()">Confirm Order</button>
+  <button onclick="closeSummaryPopup()">Cancel</button>
 </div>
 
-<!-- Order Confirmation Modal -->
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h3>Order Confirmation</h3>
-    <p>Review your order before sending:</p>
-    <ul id="modalOrderList"></ul>
-    <p>Total: ₦<span id="modalTotalAmount">0.00</span></p>
-    <button onclick="sendToKitchen()">Confirm & Send</button>
-  </div>
+
+        <!-- Update Section -->
+        <section id="kitchen-updates">
+          <h2>Kitchen Updates</h2>
+          <form id="update-form">
+            <input type="text" id="update-input" placeholder="Enter update (e.g., Out of salmon)">
+            <button type="submit" class="button send-update"><i class="fas fa-share-square"></i> Send Update</button>
+          </form>
+        </section>
+
 </div>
 
 <script src="kitchen.js"></script>
