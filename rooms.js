@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
           ${room.status === 'booked' ? `
             <p>Guest: ${room.guestName}</p>
             <p>Duration: ${room.duration}</p>
-            <button class="action-button">Mark as Cleaned</button>
+            <button class="action-button">Check Out</button>
           ` : `<button class="action-button"><a href="guest.html?roomNumber=${room.roomNumber}">Book Room</a></button>`}
         `;
         categoryElement.appendChild(roomElement);
